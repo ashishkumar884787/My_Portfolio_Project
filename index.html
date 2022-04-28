@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar background ">
+    <ul class="nav-list ">
+ 
+        <li><a href="#Home">HOME</a></li>
+        <li><a href="#Project">Project</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skill">Skill</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+    <div class="rightNav ">
+    </div>
+    </nav>
+
+
+    <section class="background firstsection" id="Home">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Welcome To My Portfolio Thanks for coming hear.............</p><br>
+                <p class="text-small">Hey.. Thanks for coming here My name is Ashish Rout
+                </p>
+          
+            </div>
+            <div class="secondHalf">
+              <img src="port.jpg" alt="laptop image">
+            </div>
+
+        </div>
+    </section>
+
+    <!--1st project section start-->
+    <h2 class="proje" id="Project">PROJECT</h2> 
+    <section class="secRight" id="Project">
+            <div class="paras">   
+        <p class="sectionTag text-big">project-1</p><br><br>
+        <h3 class="sectionSubTag text-small">HUMAN ACTIVITY RECOGNITRION SYSTEM-</h3>
+           <h3> Human activity recognition using smartphone sensor like accelerometer is one of the hectic
+topics of research .HAR is one of the time series classification problem.in this project various
+Machine learning and deep learning models have been worked out to get the best final
+result.in the same sequence, we can use LSTM(long short term memory)model of the
+recurrent neural network(RN)to recognized various activities of humans like standing,
+climbing upstairs and downstairs etc..<h3>
+        <h3>Key Technology- HTML 5, CSS, JavaScript, Python</h3> 
+          
+        <div>
+            <a href="project1.html" class="ptt">View more</a>
+         </div>        
+  </div> 
+    </section>
+<!--end 1st project section-->
+
+
+<!--about section start-->
+<h2 id="About" class="grn">About Me</h2> 
+<section class="secRight" id="Project">
+    <div class="paras">     
+    <p class="sectionTag text-big"></p><br><br>
+    <h3 class="sectionSubTag text-small">NAME- Ashish Rout</h3><br>  
+    <h3>Current Status- Master In Computer Application[Indira Gandhi Institute Of Technology]</h3><br>
+    <h3>Bsc in Mathematics Honours[Marshaghai Degree College,Kendrapara]</h3><br>
+    <h3>Current Status- Master In Computer Application</h3>
+     
+   
+     
+     <div>
+        <a href="mailto:ashishkumar1998rout@gmail.com" class="ptt">Gmail...</a>
+     </div> 
+    </div>
+<div class="thumbnail"> 
+<img src="ashish.jpeg" alt=" image" class="imgFluid">  
+</div>
+</section>
+<!--about section end-->
+<br>
+<br>
+<br>
+<hr>
+<!--Skill section stsrt-->
+<h2 id="Skill" class="grn">My Skill</h2> 
+<section class="secRight" id="Skill">
+    <div class="paras">     
+    <p class="sectionTag text-big"></p>
+    <h3 class="sectionSubTag text-small">NAME- Ashish Rout</h3>
+     
+    <div>
+        <a  class="ptm">HTML----------------</a>
+     </div> 
+     <div>
+        <a  class="ptm">CSS-------------------</a>
+     </div> 
+     <div>
+        <a class="ptm">JavaScript--Basic</a>
+     </div> 
+     <div>
+        <a class="ptm">MySQL---------Basic</a>
+
+     </div>  
+     <div>
+        <a class="ptm">Python-------------</a>
+     </div> 
+    </div>
+<div class="thumbnail"> 
+<img src="ashish.jpeg" alt="laptop image" class="imgFluid">  
+</div>
+</section>
+<!--skill section End-->
+
+<!-- Contact section start-->
+<section class="contact" id="Contact">
+   <h2 class="text-center">Contact ME</h2><br><br>
+   <div class="form">
+       <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name">
+       <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your Phone">
+       <input class="form-input" type="text" name="Email" id="email" placeholder="Enter your Email">
+       <textarea class="form-input" name="text" id="text" cols="30" rows="10" id="message" placeholder="Wrighe your message">
+           </textarea>
+       <button class="btn btn-dark" onclick="SaveData()">Submit</button>
+   </div>
+</section>
+<!-- Contact section End-->
+
+
+<!-- Footer section start-->
+<footer class="background">
+      <p class="text-footer">
+    Copyright @copy 2022- My Portfolio All rights reserved<br>
+    Ashish Rout
+      </p>
+      
+</footer>
+<!-- Footer section End-->
+
+<!--Start java script-->
+<script>
+    function SaveData()
+    {
+    
+   var name=document.getElementById("name").value;
+   var phone=document.getElementById("phone").value;
+   var email=document.getElementById("email").value;
+   var message=document.getElementById("text").value;
+  
+   
+    localStorage.setItem("Name",name)
+    localStorage.setItem("Phone",phone)
+    localStorage.setItem("Email",email)
+    localStorage.setItem("Message",message)
+
+    var validEmail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var validmobile=/^\d{10}$/;
+    if(name=="")
+    {
+        
+      alert("Please enter your name"); 
+       return false;
+    }
+    else if(phone==""){
+       alert("Please enter your Mobile number"); 
+       return false;
+    }
+    else if(validmobile.test(phone)==false)
+    {
+        alert("Please enter valid mobile number")
+        return false;
+    }
+    else if(email==""){
+       alert("Please enter your E-mail"); 
+       return false;
+    }
+    else if(validEmail.test(email)==false)
+    {
+        alert("Please enter valid E-mail id")
+        return false;
+    }
+
+    else if(text==""){
+       alert("Please wrright your conceren"); 
+       return false;
+    }
+    else{
+        return false;
+    }
+    }  
+</script>
+
+<!--End java script  
+   -->
+</body>
+</html>
